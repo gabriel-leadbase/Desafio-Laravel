@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "d830fb3a-ca4b-45ae-a4a5-79b86de28a7b",
+		"name": "Auth",
+		"description": "# Introdução\nAPI desenvolvida para a vaga de back-end GolFarma\nBanck-end compatível com o Laravel 7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiMTE4ZGYyYTE5OWMzMWYwODQ3MmQ5YzQxYWE5YzYyOTY2MTg0ODMyODMyZGNmZTdkYmM3NTIzNjNiODUwNmE2Mjg4ZjhkNWE2YTBiN2M5YzkiLCJpYXQiOjE2MTgzMjMyNDcuNjk3ODM1LCJuYmYiOjE2MTgzMjMyNDcuNjk3ODQsImV4cCI6MTY0OTg1OTI0Ny42OTAwODcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.Or0VZ8irBVPigOxJLlplu1ZytrVjQ25iNcbUxwaPUs736GTjNPZWH0Mib5BtVQYt9j7X9Yy2kRNcxSOAxGVvr-8p8N4-mB2LGT1x1aBdCXhh7CTr-fXAX95xu8HYHmiH-1vmdUxTzMvmHmCxMtl1eWiOvK2svcKqxkGJBdEkHutxpEYDmGXjqJs4hNPwHtOA1sNwySwJBMX5Ko4FF_4cPjnIiFTLPDTuiarHmTHL1y4fRhcFocUV33A_LmWuL1xvAByTz2OQjka8h5bTQqu9qIL48EZfjN0guBLmx1SCDBZFd8cQkskDTAXpQJ_pmnn69hwxc2oZdp9Vi7IES0MxLmEn5zUYPrqxiEXDO_QGzzqy2mn-xaQaf5qiv4012-9VT6t5JdOFIGWuD5PnlA6v-SVI4Zopn_wmrAwCRk6tFVygTsue_yy10nirb0Atdl6j-NGzz5Z5FNlz2TWvBE3MZYTQ-SfvwQljYlTRJ-G9S0nMaCuwmCH8-OG8fH21LLPeHbXHLH2H_TavO_AK3XfOyN25BMHjY6SWttrHeYpBDQWBm5HC4m7uYS67T1jL_LirrwWYqm7P1b5H94T5mva5FUXoT95WV0e-HHRQlOy64O33dZ3AOTTFwOCcHrBerj6rJh9uI1bI66cylqhKAgQfmGd18o0T4twyj81NKjeFkIc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"11111111111\",\r\n    \"password\": \"12345678\",\r\n    \"password_confirmation\": \"12345678\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Bruno",
+									"disabled": true
+								},
+								{
+									"key": "cpf",
+									"value": "01234567891",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456780",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456780\"",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Route for login"
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ana Carla\",\r\n    \"cpf\": \"21213191111\",\r\n    \"email\": \"aa@gmal.com\",\r\n    \"type\": \"admin\",\r\n    \"password\": \"123456780\",\r\n    \"password_confirmation\": \"123456780\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Route for login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiZDZiZGJmMTAxNWVjZDc4YjlmOGRhNTgwZDM1ZDJiNmM0YTk4MTFmNDJlZjAyZTY4NGZjOGYzMGViZGNhZGM1MmY1NWU1MTU2YmY3ZjVlNGIiLCJpYXQiOjE2MTgzMjQ2MDQuNTIzMTMxLCJuYmYiOjE2MTgzMjQ2MDQuNTIzMTQsImV4cCI6MTY0OTg2MDYwNC41MTMzMzYsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.sTCPaQijG9kpjS7Ktyv7dx6J8kndRWxeCJPxO82Co0_vbn7W1seRhbaJBHrtr_Tt-ZLvAiWVqBseRjydw9y38gkd4U7zvVwaUq6dZtz03bZlZek5u8Fo-zMDFiA-E_cUl4Nb_aNTxwwMMyk1XSbA_sRJEwJWOUfGuHRyKX3qLKNH4z6TwIcwbtWBP4ATxn7k74fTuDgDRlpx3aokDwele9aHp_qQirkvzDLSx89dau20KXzZf_6hUcQUW1K6XlIt62_Epy6yc_C3geJIr295sS0IOfa2cLj5ZdOwN_cIgGvK9j8H-vsMhbNfaKn_uRcM_ob1G2ysNDZC0F9B77P2G3s0laIJmvL2Ax4CNqvIvL00BoewIu_1jZvuz7kmC1Pf5oUOIm0usTkLunB8plN8MZ6QkSRa8Wb_-56m2lo1-Dvew-lJY1_UiiTUcv1gCSnRvfXnqwlDOU7fmHsYmuge_iPzP7ZZKzawLh6BXae6jA0rO0dnuL5chD4GU7Tp9x3c_y1ETseaFB-YfvpwkU0iJBim03W5EZrROo9wSynvk-Kr1MfTu4yiqbcZoB7DQrMmH8WAY0S4WfnFW6jB0mc7OClCdqwXH4Jvlybe3O-xOupBX1k1KDuU8rX8NqhqYunNYC4vYomlUGfEqPEx1b-JUaDCP9KlX7UqlpzHpG_4wSo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bruno\",\r\n    \"cpf\": \"12345678901\",\r\n    \"email\": \"m@gmail.com\",\r\n    \"password\": \"123456780\",\r\n    \"password_confirmation\": \"123456780\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permission",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permission"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Bruno",
+									"disabled": true
+								},
+								{
+									"key": "cpf",
+									"value": "01234567891",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456780",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456780\"",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Route for login"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiYWE3MTQ3YTc0YjViYzEwZmFmODlkMDQxNjljZGM2NTYyYjkyZDI2ODdiOTNjMDA5ZWU2ZGNjNTFhMTQyZjhjZmZmMzIyNDk4MzJmZTUxOGQiLCJpYXQiOjE2MTgzMjQxMTcuMjk4MzYyLCJuYmYiOjE2MTgzMjQxMTcuMjk4MzY2LCJleHAiOjE2NDk4NjAxMTcuMjkyMTI0LCJzdWIiOiIxIiwic2NvcGVzIjpbInN0b3JlLXBlcm1pc3Npb24iXX0.vxenZ2P00LeFm1o9mFE2-tnt3z2ipX1S5kXCMISM9X2bXB8kx6VH0XKiaOW2mmhpGfZ9YM9Vh_cZBGVpHCclPJp20DbzxlbupguyCI04RSx5DLGKSxk6qnOiOoiOzWc4PatP5b7e0tzFWCL7TuxDwX27Gxuvxnhq6s-eTyCCSdt9Erl92Kcxm8w-s99-gN2Vhn3fj7XRj3Ed5ghdwHdy03zjyNdy56qKHZBG5aep7OYgd6gRmiudFkFNbaMcAxNxratXrjdh76ZZbN47VuWr4b70qtRdoIG1EjC9ME-oA7jUmNNM43GXE3YjoteZI5hhUcQFpfa67_n-vf9cqt7o-eicMFVrHlWQJA42YrC9_8G1QwNmcwp-yxbxtV8tOjK1oFh6V9ushHjZbbyvBHpNHjrp2LK5eBsG746q7Y6pjpvWt5u7YHoNkK2Pwlte_UL2MH6-uI4uDkMLFXwCUk3o1JDPVR-QFhvXqH6QnDb3aVPqtw3m15LHz9Cze3cuB46R_5zXGZVWzTwYOc7yXNwUjUegZZgizoWC0uqm4SvHXabfVmjlNI5v44L6myAJS7JwiT4798bdDX9rn-talCT_RouN6ROr2Y2bJ2uiK7ADMbv7yV9J8kWbWAVT7K_6EefpUzfwaseSw7SVBB7OKnuT2wzl8zHEYzkdFNPkHW6zhqs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Editor\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permission/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permission",
+								"create"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Bruno",
+									"disabled": true
+								},
+								{
+									"key": "cpf",
+									"value": "01234567891",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456780",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456780\"",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Route for login"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiYWE3MTQ3YTc0YjViYzEwZmFmODlkMDQxNjljZGM2NTYyYjkyZDI2ODdiOTNjMDA5ZWU2ZGNjNTFhMTQyZjhjZmZmMzIyNDk4MzJmZTUxOGQiLCJpYXQiOjE2MTgzMjQxMTcuMjk4MzYyLCJuYmYiOjE2MTgzMjQxMTcuMjk4MzY2LCJleHAiOjE2NDk4NjAxMTcuMjkyMTI0LCJzdWIiOiIxIiwic2NvcGVzIjpbInN0b3JlLXBlcm1pc3Npb24iXX0.vxenZ2P00LeFm1o9mFE2-tnt3z2ipX1S5kXCMISM9X2bXB8kx6VH0XKiaOW2mmhpGfZ9YM9Vh_cZBGVpHCclPJp20DbzxlbupguyCI04RSx5DLGKSxk6qnOiOoiOzWc4PatP5b7e0tzFWCL7TuxDwX27Gxuvxnhq6s-eTyCCSdt9Erl92Kcxm8w-s99-gN2Vhn3fj7XRj3Ed5ghdwHdy03zjyNdy56qKHZBG5aep7OYgd6gRmiudFkFNbaMcAxNxratXrjdh76ZZbN47VuWr4b70qtRdoIG1EjC9ME-oA7jUmNNM43GXE3YjoteZI5hhUcQFpfa67_n-vf9cqt7o-eicMFVrHlWQJA42YrC9_8G1QwNmcwp-yxbxtV8tOjK1oFh6V9ushHjZbbyvBHpNHjrp2LK5eBsG746q7Y6pjpvWt5u7YHoNkK2Pwlte_UL2MH6-uI4uDkMLFXwCUk3o1JDPVR-QFhvXqH6QnDb3aVPqtw3m15LHz9Cze3cuB46R_5zXGZVWzTwYOc7yXNwUjUegZZgizoWC0uqm4SvHXabfVmjlNI5v44L6myAJS7JwiT4798bdDX9rn-talCT_RouN6ROr2Y2bJ2uiK7ADMbv7yV9J8kWbWAVT7K_6EefpUzfwaseSw7SVBB7OKnuT2wzl8zHEYzkdFNPkHW6zhqs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"editor\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permission/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permission",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Bruno",
+									"disabled": true
+								},
+								{
+									"key": "cpf",
+									"value": "01234567891",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "m@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456780",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456780\"",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Route for login"
+					},
+					"response": []
+				}
+			],
+			"description": "Listagem de todas as pemissões do banco"
+		}
+	]
+}
